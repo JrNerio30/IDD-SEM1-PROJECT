@@ -1,6 +1,6 @@
 body{
   margin: 1;
-  
+  align-items: center;
 }
 
 header{
@@ -8,7 +8,7 @@ header{
 }
 
 section{
-  padding: 200px;
+  padding:200px 0;
   
 }
 
@@ -16,14 +16,7 @@ figure{
   margin: 0;
 }
 
-figcaption{
-  padding-left: 150px;
-}
 
-main{
-  padding: 100px;
-  padding-left: 33%;
-}
 
 main nav{
   padding-bottom: 50px;
@@ -34,7 +27,6 @@ main nav{
 main nav a{
   text-decoration: none;
   padding: 10px;
-  margin: 5px;
   background-color:black;
   color: white;
   border-radius: 10px;
@@ -45,7 +37,7 @@ main h1{
 }
 
 footer{
-  padding: 200px;
+  padding:200px 0;
 }
 
 html{
@@ -57,20 +49,19 @@ table, th, td {
 }
 
 button{
-  margin-left: 500px;
   background-color: black;
-  padding: 20px;
   border-radius: 10px;
-  border: none;
-  width: 500px;
   font-style: bold;
   border: none;
+  cursor: pointer;
+  padding: 20px;
+  width: 300px;
 }
  button a{
   text-decoration: none;
   color: white;
   font-size: 20px;
-
+  font-family: 'Times New Roman', Times, serif;
  }
 
 
