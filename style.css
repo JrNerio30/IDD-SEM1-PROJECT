@@ -1,68 +1,380 @@
-body{
-  margin: 1;
-  align-items: center;
-}
+/* The whole website */
 
-header{
-  align-items: center;
-}
-
-section{
-  padding:200px 0;
-  
-}
-
-figure{
+*{
+  box-sizing: border-box;
   margin: 0;
-}
-
-
-
-main nav{
-  padding-bottom: 50px;
-  padding-left: 5px;
-  text-decoration: none;
-}
-
-main nav a{
-  text-decoration: none;
-  padding: 10px;
-  background-color:black;
-  color: white;
-  border-radius: 10px;
-}
-
-main h1{
-  padding-left: 110px;
-}
-
-footer{
-  padding:200px 0;
+  padding: 0;
 }
 
 html{
   scroll-behavior: smooth;
 }
 
-table, th, td {
-  border: 1px solid black;
+body{
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #efebec;
 }
 
-button{
-  background-color: black;
-  border-radius: 10px;
-  font-style: bold;
-  border: none;
-  cursor: pointer;
-  padding: 20px;
-  width: 300px;
+header{
+  align-items: center;
 }
- button a{
+
+/* The navigation bar/Name, biography, hobbies, best movies, attributions and contact*/
+
+.main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 3%;
+  background-color: black;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
+
+/* FERNANDO NERIO JR */
+
+.name{
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.name a{
   text-decoration: none;
   color: white;
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+}
+
+/* BIOGRAPHY, HOBBIES, BEST MOVIES, ATTRIBUTIONS */
+
+ .nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
  }
+
+.nav_links li a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav_links a{
+  transition: all 200ms;
+}
+
+.nav_links a:hover{
+  background-color: #efebec;
+  color: black;
+  padding: 5px 10px;
+}
+
+.nav_links a:active{
+  opacity: 0.7;
+  padding: 3px 10px ;
+}
+
+/* CONTACT */
+
+.contact{
+  margin-left: 320px;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 300ms;
+  border: none;
+  background-image: linear-gradient(225deg, #000000 0%, #ffffff 53%, #000000 100%);
+}
+
+.contact:hover{
+  background-color: white;
+  transform: translateX(2px) translateY(-2px) scale(1.2);
+  border: white 2px;
+}
+
+.contact a{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.contact:active{
+  transform: scale(1);
+}
+
+/* All of the section format */
+
+section{
+  padding:250px 0;
+}
+
+
+/* About me section */
+.pfp img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  float: left;
+  border: black 5px solid;
+  margin-right: 30px; 
+}
+.pfp{
+  margin: 20px auto;
+  width: 75% ;
+}
+
+.text h2{
+  font-size: 50px;
+}
+
+.text p{
+  font-size: 16px;
+}
+
+
+/* The biography button that leads to hobbies section */
+
+.B{
+  display: grid;
+  text-align: center;
+  gap: 2rem;
+}
+
+.B h2{
+  font-size: 100px;
+}
+
+.B h2 a{
+  text-decoration: none;
+  color: black;
+  transition: all 600ms;
+}
+
+.B h2 a:hover{
+  padding: 0 50px;
+  padding-bottom: 10px;
+  border-radius: 300px;
+  box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
+}
+
+/* The Hobbies section using DISPLAY GRID*/
+
+.H{
+  text-align: center;
+}
+
+.H h3{
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.H ul{
+  display: grid;
+  gap: 2rem;
+}
+
+.H li a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 600ms;
+  background-color: white;
+  padding: 8px;
+  box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.H li a:hover{
+  border: silver;
+  padding: 15px;
+  background-color: black;
+  color: white;
+}
+
+/* The Best Movies Section using DISPLAY FLEX */
+
+.BM{
+  text-align: center;
+}
+
+.BM h3{
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.BM ol{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.BM a{
+  color: black;
+  text-decoration: none;
+  box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
+  font-weight: bold;
+  padding: 8px;
+  font-size: 20px;
+  transition: all 600ms;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.BM li a:hover{
+  background-color: black;
+  color: white;
+  padding: 23px;
+ 
+}
+
+
+/* The Attribution/Tables section */
+
+.T h3{
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.T table{
+  box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
+}
+
+
+.T th, td{
+  padding: 10px 25px;
+}
+
+.T th{
+  color: white;
+  background-color: #000000;
+}
+
+.second_row td{
+ background-color: rgb(207, 204, 204);
+}
+
+table{
+  border-collapse: collapse;
+  margin: auto;
+}
+
+/* "GO TO IMAGE LINK */
+
+.T a{
+  text-decoration: none;
+}
+
+
+/* The last section(footer) of the portfolio website, Contact information */
+footer{
+  padding:150px 0;
+}
+
+/*  */
+
+.CM{
+  color: black;
+  display: grid;
+  gap: 2rem;
+}
+
+.CM h2{
+  font-size: 50px;
+  text-align: center;
+}
+
+/* FIRST NAME, LAST NAME, EMAIL ADDRESS, COMMENTS/QUESTIONS */
+
+input[type=text]{
+  width: 300px;
+  margin: 8px 0;
+  border-radius: 4px; 
+}
+
+.inputs{
+  display: grid;
+  gap: 5px;
+  margin:auto;
+}
+
+.first_name{
+  width: 200px;
+  height: 30px;
+  border: grey 1px solid;
+}
+
+
+.last_name{
+  width: 100%;
+  height: 30px;
+  border: grey 1px solid;
+}
+
+.email{
+  width: 100%;
+  height: 30px;
+  border: grey 1px solid;
+}
+
+.comments{
+  width: 100%;
+  height: 100px;
+  border: grey 1px solid;
+}
+
+/* SEND MESSAGE BUTTON */
+
+.SM{
+  margin-top: 20px;
+  color: white;
+  background-color: #33b864;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: all 300ms;
+  
+}
+
+.inputs a{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.SM:hover{
+  padding: 15px;
+  box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
+  transform: translateX(2px) translateY(-2px) scale(1.1);
+}
+
+.SM:active{
+  padding: 10px;
+  transform:scale(1);
+}
+
+
+
+
+
+
 
 
 

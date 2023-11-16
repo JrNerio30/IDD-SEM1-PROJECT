@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Fernando Nerio Jr">
     <meta name="description" content="This is Fernando's personal portfolio">
-    <title>Fernando's Portfoilio</title>
+    <title>Fernando's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- This is my Html  (◕‿◕✿)-->
     <link rel="stylesheet" href="style.css">
@@ -15,96 +15,113 @@
   <body>
     <header>
       <main>
-        <h1>Fernando Nerio Jr</h1>
-          <nav>
-            <a href="#About Me" class="href">About Me</a>
-            <a href="#Hobbies" class="href">Hobbies</a>
-            <a href="#Best Movies" class="href">Best Movies</a>
-            <a href="#Attributions" class="href">Attributions</a>
-            <a href="#Contact Information">Contact</a>
+        <div class="main">
+        <h1 class="name"><a href="#top">Fernando Nerio Jr</a></h1>
+          <nav class="nav_links">
+            <ul>
+                <li><a href="#Biography" class="href">Biography</a></li>
+                <li><a href="#Hobbies">Hobbies</a></li>
+                <li><a href="#Best Movies" class="href">Best Movies</a></li>
+                <li><a href="#Attributions" class="href">Attributions</a></li>
+            </ul> 
           </nav>
-          <figure>
-              <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="
-              silhouette of man illustration by. Ben Sweet">
-            <figcaption><b>Silhouette of man illustration</b></figcaption>
-          </figure>
+          <button class="contact"><a href="#Contact Information">Contact</a></button>
+        </div>
       </main>
      
-      <section id="About Me">
-        <h2>About Me</h2>
-          <p>I am a passionate web developer who constantly seeks opportunities to expand my knowledge and coding skills.
-            My mission is to design and develop websites that not only meet industry standards but also have a significant, positive impact on the daily lives of many individuals. 
-            I am driven by the belief that the internet can be a powerful tool for making information, services,   and resources more accessible and user-friendly for people from all walks of life.
-            With a keen eye for detail, a commitment to excellence, and a genuine desire to  enhance the online experience, I take pride in my work as a web developer 
-            and look forward to every new project as a chance to contribute to a better, more interconnected digital world.
-          </p>
+      <section class="Am">
+          <div class="pfp">
+              <img src="./Images/20231115_230414000_iOS.jpg" alt="a cat staring at you>
+              <div class="text">
+                <h2>About Me</h2>
+               <p>
+                  I am a passionate web developer who constantly seeks opportunities to expand my knowledge and coding skills.
+                  My mission is to design and develop websites that not only meet industry standards but also have a significant, positive impact on the daily lives of many individuals. 
+                  I am driven by the belief that the internet can be a powerful tool for making information, services,   and resources more accessible and user-friendly for people from all walks of life.
+                  With a keen eye for detail, a commitment to excellence, and a genuine desire to  enhance the online experience, I take pride in my work as a web developer 
+                  and look forward to every new project as a chance to contribute to a better, more interconnected digital world.
+                  </p>
+              </div>
+          </div>
+  
       </section>
         
-      <section id="Hobbies">
-        <h2>Biography</h2>
-          <h3>Hobbies</h3>
-            <nav>
-              <ul>
-                <li><a href="./BasketBall/Basketball.html">Basketball</a></li>
-                <li><a href="./Music/Music.html ">Music</a></li>
-                <li><a href="./Gaming/Gaming.html">Gaming</a></li>  
-              </ul>
-            </nav>
+      <section class="B" id="Biography">
+        <h2><a href="#Hobbies">Biography</a></h2>
       </section>
 
-      <section id="Best Movies">   
+      <section class="H" id="Hobbies">
+        <h3>Hobbies</h3>
+        <nav>
+          <ul>
+            <li><a href="./BasketBall/Basketball.html">Basketball</a></li>
+            <li><a href="./Music/Music.html">Music</a></li>
+            <li><a href="./Gaming/Gaming.html">Gaming</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="BM" id="Best Movies">   
         <h3>Best Movies</h3>
           <nav>
             <ol>
               <li><a href="https://www.imdb.com/title/tt9362722/" target="_blank">Across the Spider-Verse</a></li>
               <li><a href="https://www.imdb.com/title/tt4495098/?ref_=fn_al_tt_1" target="_blank">Gran Turismo</a></li>
               <li><a href="https://www.imdb.com/title/tt6710474/" target="_blank">Everything Everywhere All at Once</a></li>
+              <li><a href="https://www.imdb.com/title/tt5311514/" target="_blank">Your Name</a></li>
+              <li><a href="https://www.imdb.com/title/tt2591814/" target="_blank">The Garden of Words</a></li>
+              <li><a href="https://www.imdb.com/title/tt1646971/" target="_blank">How to Train Your Dragon 2</a></li>
             </ol>
           </nav>
         </section>
 
-      <section id="Attributions">
+      <section class="T" id="Attributions">
         <h3>Attributions</h3>
-        <table style="width:100%">
+        <table>
           <tr>
             <th>Title</th>
             <th>Author</th>
             <th>Licence</th>
+            <th>Link</th>
           </tr>
           <tr>
-            <td>"silhouette of man illustration"</td>
-            <td>Ben Sweet</td>
+            <td>"Black flat screen tv turned on near white wall" </td>
+            <td>Chuck Fortner</td>
             <td>Unsplash Licence</td>
+            <td><a href="https://unsplash.com/photos/black-flat-screen-tv-turned-on-near-white-wall-LFVBohYmtgc" target="_blank">Go to Image</a></td>
           </tr>
-          <tr>
-            <td>"a couple of women sittingon top of  a couch" </td>
-            <td>Ave Calvar</td>
-            <td>Unsplash Licence</td>
-          </tr>
-          <tr>
-            <td>"a basketball jersey on a table next to a plant" </td>
+          <tr class="second_row">
+            <td>"A basketball jersey on a table next to a plant"</td>
             <td>Tyler Martoia</td>
             <td>Unsplash Licence</td>
+            <td><a href="https://unsplash.com/photos/a-basketball-jersey-on-a-table-next-to-a-plant-nVpT1jeu3f0" target="_blank">Go to Image</a></td>
           </tr>
           <tr>
-            <td>"person playing guitar"</td>
-            <td>Jefferson Santos</td>
+            <td>"Black turntable on brown wooden table"</td>
+            <td>Kevin McCutcheon</td>
             <td>Unsplash Licence</td>
+            <td><a href="https://unsplash.com/photos/black-turntable-on-brown-wooden-table-TcSckNRL9J8" target="_blank">Go to Image</a></td>
           </tr>
         </table>
       </section>
-      <footer id="Contact Information">
-        <h2>Contact Information</h2>
-        <p><b>Fernando Nerio Jr</b></p>
-        <p><b>Sample.email@gmail.com</b></p>
-        <p><b>+1 499 999 9999</b></p>
+
+      <footer class="CI" id="Contact Information">
+        <div class="CM">
+            <h2>Contact Me</h2>
+            <div class="inputs">
+            <h4>First Name</h4>
+            <input class="first_name" type="text" name="first name" id="fname">
+            <h4>Last Name</h4>
+            <input class="last_name" type="text" name="last name" id="lname">
+            <h4>Email Address</h4>
+            <input class="email" type="text" name="email address" id="eaddress">
+            <h4>Comments/Questions</h4>
+            <input class="comments" type="text" name="comment/questions" id="c/q">
+            <a href="#top"><button class="SM">Send Message</button></a>
+            </div>
+          </div>
       </footer>
       
-      <button>
-          <a href="#top">
-            Back to Top
-          </a>
-      </button>
     </header>
   </body>
 </html>
