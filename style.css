@@ -11,27 +11,24 @@ html{
 }
 
 body{
-  align-items: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: #efebec;
 }
 
-header{
-  align-items: center;
-}
+
 
 /* The navigation bar/Name, biography, hobbies, best movies, attributions and contact*/
 
+
 .main{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between ;
   align-items: center;
-  padding: 20px 3%;
+  padding: 20px 4%;
   background-color: black;
   position: fixed;
-  overflow: hidden;
   top: 0;
   width: 100%;
 }
@@ -39,41 +36,40 @@ header{
 /* FERNANDO NERIO JR */
 
 .name{
-  margin-right: auto;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
   transition: all 300ms;
 }
 
+.name a:hover{
+  color: #ed8728;
+}
+
 .name a{
   text-decoration: none;
   color: white;
+  transition: all 300ms;
 }
 
 /* BIOGRAPHY, HOBBIES, BEST MOVIES, ATTRIBUTIONS */
 
+
  .nav_links li{
   display: inline-block;
-  padding: 0px 20px;
  }
 
 .nav_links li a{
   color: white;
   font-size: 20px;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 10px;
+  transition: all 300ms;
+  padding: 10px 20px;
 }
 
-.nav_links a{
-  transition: all 200ms;
-}
 
 .nav_links a:hover{
-  background-color: #efebec;
-  color: black;
-  padding: 5px 10px;
+  color: #ed8728;
 }
 
 .nav_links a:active{
@@ -84,18 +80,21 @@ header{
 /* CONTACT */
 
 .contact{
-  margin-left: 320px;
+  display: grid;
+  align-items: end;
+  justify-content: end;
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px 25px;
   transition: all 300ms;
   border: none;
+  cursor: pointer;
   background-image: linear-gradient(225deg, #000000 0%, #ffffff 53%, #000000 100%);
 }
 
 .contact:hover{
-  background-color: white;
+  background-image: linear-gradient(225deg, #ed8728 0%, #ffffff 52%, #ed8728 100%);
+  color: white;
   transform: translateX(2px) translateY(-2px) scale(1.2);
-  border: white 2px;
 }
 
 .contact a{
@@ -112,12 +111,22 @@ header{
 
 /* All of the section format */
 
-section{
+/* section{
   padding:250px 0;
-}
+} */
 
 
 /* About me section */
+
+section#About_me{
+  padding:300px 0;
+  background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .pfp img{
   width: 200px;
   height: 200px;
@@ -127,20 +136,33 @@ section{
   margin-right: 30px; 
 }
 .pfp{
-  margin: 20px auto;
+  margin: 100px auto;
   width: 75% ;
 }
 
+/* H2 and Paragraph */
+
 .text h2{
   font-size: 50px;
+  color: white;
 }
 
 .text p{
-  font-size: 16px;
+  font-size: 20px;
+  color: white;
+}
+
+.text h2, p{
+  margin-top: 20px;
 }
 
 
 /* The biography button that leads to hobbies section */
+
+
+section#Biography{
+  padding:350px 0;
+}
 
 .B{
   display: grid;
@@ -155,7 +177,7 @@ section{
 .B h2 a{
   text-decoration: none;
   color: black;
-  transition: all 600ms;
+  transition: all 500ms;
 }
 
 .B h2 a:hover{
@@ -167,13 +189,20 @@ section{
 
 /* The Hobbies section using DISPLAY GRID*/
 
+section#Hobbies{
+  padding: 250px 0;
+}
+
 .H{
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .H h3{
-  font-size: 50px;
+  font-size: 90px;
   margin-bottom: 50px;
+  margin-top: 100px;
 }
 
 .H ul{
@@ -186,7 +215,7 @@ section{
   color: black;
   font-size: 20px;
   font-weight: bold;
-  transition: all 600ms;
+  transition: all 500ms;
   background-color: white;
   padding: 8px;
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
@@ -203,13 +232,22 @@ section{
 
 /* The Best Movies Section using DISPLAY FLEX */
 
+
+section#Best_Movies{
+  padding: 250px 0;
+}
+
 .BM{
   text-align: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
+
 
 .BM h3{
   margin-bottom: 50px;
-  font-size: 50px;
+  font-size: 90px;
+  margin-top: 110px;
 }
 
 .BM ol{
@@ -227,7 +265,7 @@ section{
   font-weight: bold;
   padding: 8px;
   font-size: 20px;
-  transition: all 600ms;
+  transition: all 500ms;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -242,10 +280,15 @@ section{
 
 /* The Attribution/Tables section */
 
+section#Attributions{
+  padding: 250px 0;
+}
+
+
 .T h3{
   margin-bottom: 50px;
   text-align: center;
-  font-size: 50px;
+  font-size: 90px;
 }
 
 .T table{
@@ -279,11 +322,10 @@ table{
 
 
 /* The last section(footer) of the portfolio website, Contact information */
-footer{
-  padding:150px 0;
-}
 
-/*  */
+footer#Contact_Information{
+  padding: 250px 0;
+}
 
 .CM{
   color: black;
