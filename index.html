@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- This is my Html  (◕‿◕✿)-->
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./Images/Logo.gif">
   </head>
   
   <body>
-    <header>
-      <main class="links" id="link">
+      <header class="links" id="link">
         <div class="main">
-        <h1 class="name"><a href="#top">Fernando Nerio Jr</a></h1>
+        <h1 class="name"><a href="#top"><img src="./Images/Logo.gif"></a></h1>
           <nav class="nav_links">
             <ul>
                 <li><a href="#Biography" class="href">Biography</a></li>
@@ -25,11 +25,11 @@
                 <li><a href="#Attributions" class="href">Attributions</a></li>
             </ul> 
           </nav>
-          <button class="contact"><a href="#Contact_Information">Contact</a></button>
+          <a class="contact" href="#Contact">Contact</a>
         </div>
-      </main>
+      </header>
      
-      <section class="Am" id="About_me">
+      <main class="Am" id="About_me">
           <div class="pfp">
               <img src="./Images/20231115_230414000_iOS.jpg" alt="a cat staring at you">
               <div class="text">
@@ -44,7 +44,7 @@
               </div>
           </div>
   
-      </section>
+        </main>
         
       <section class="B" id="Biography">
         <h2><a href="#Hobbies">Biography</a></h2>
@@ -111,10 +111,10 @@
         </table>
       </section>
 
-      <footer class="CI" id="Contact_Information">
+      <footer class="CI" id="Contact">
         <div class="CM">
             <h2>Contact Me</h2>
-            <div class="inputs">
+          <div class="inputs">
             <h4>First Name</h4>
             <input class="first_name" type="text" name="first name" id="fname">
             <h4>Last Name</h4>
@@ -124,10 +124,26 @@
             <h4>Comments/Questions</h4>
             <input class="comments" type="text" name="comment/questions" id="c/q">
             <a href="#top"><button class="SM">Send Message</button></a>
-            </div>
           </div>
+        </div>
       </footer>
       
-    </header>
+      <footer class="more" id="info">
+        <div class="more_information">
+          <h3>More Contact Information</h3>
+          <nav>
+            <ul>
+              <li>Fernando.Nerio@gmail.com</li>
+              <li>+1-895-598-8559</li>
+              <li class="linkedin"><ion-icon name="logo-linkedin"></ion-icon></li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            Fernando Nerio Jr&copy;
+          </div>
+        </div>
+      </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@1,300&display=swap');
+
+
 /* The whole website */
 
 *{
@@ -15,6 +18,12 @@ body{
   margin: 0;
   padding: 0;
   background-color: #efebec;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 
@@ -24,9 +33,9 @@ body{
 
 .main{
   display: flex;
-  justify-content: space-between ;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 4%;
+  padding: 10px 4%;
   background-color: black;
   position: fixed;
   top: 0;
@@ -35,15 +44,11 @@ body{
 
 /* FERNANDO NERIO JR */
 
-.name{
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 300ms;
-}
-
-.name a:hover{
-  color: #ed8728;
+.name img{
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
 }
 
 .name a{
@@ -61,64 +66,50 @@ body{
 
 .nav_links li a{
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   transition: all 300ms;
   padding: 10px 20px;
+  margin-left: 20px;
 }
 
 
 .nav_links a:hover{
-  color: #ed8728;
+  color: darkred;
 }
 
 .nav_links a:active{
   opacity: 0.7;
-  padding: 3px 10px ;
 }
 
 /* CONTACT */
 
 .contact{
-  display: grid;
-  align-items: end;
-  justify-content: end;
   border-radius: 10px;
   padding: 8px 25px;
-  transition: all 300ms;
   border: none;
   cursor: pointer;
-  background-image: linear-gradient(225deg, #000000 0%, #ffffff 53%, #000000 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 600ms;
 }
 
 .contact:hover{
-  background-image: linear-gradient(225deg, #ed8728 0%, #ffffff 52%, #ed8728 100%);
-  color: white;
-  transform: translateX(2px) translateY(-2px) scale(1.2);
+  background-color: white;
+  color: black;
 }
 
-.contact a{
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-}
 
 .contact:active{
-  transform: scale(1);
+  opacity: 0.5;
 }
-
-/* All of the section format */
-
-/* section{
-  padding:250px 0;
-} */
 
 
 /* About me section */
 
-section#About_me{
+main#About_me{
   padding:300px 0;
   background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
   background-position: center;
@@ -128,15 +119,15 @@ section#About_me{
 
 
 .pfp img{
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   float: left;
   border: black 5px solid;
   margin-right: 30px; 
 }
 .pfp{
-  margin: 100px auto;
+  margin: auto;
   width: 75% ;
 }
 
@@ -148,12 +139,12 @@ section#About_me{
 }
 
 .text p{
-  font-size: 20px;
+  font-size: 15px;
   color: white;
 }
 
 .text h2, p{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
@@ -161,17 +152,16 @@ section#About_me{
 
 
 section#Biography{
-  padding:350px 0;
+  padding:290px 0;
 }
 
 .B{
   display: grid;
   text-align: center;
-  gap: 2rem;
 }
 
 .B h2{
-  font-size: 100px;
+  font-size: 90px;
 }
 
 .B h2 a{
@@ -195,14 +185,13 @@ section#Hobbies{
 
 .H{
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: auto;
 }
 
 .H h3{
   font-size: 90px;
-  margin-bottom: 50px;
-  margin-top: 100px;
+  margin-bottom: 20px;
+  margin-top: auto;
 }
 
 .H ul{
@@ -221,6 +210,24 @@ section#Hobbies{
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
   overflow: hidden;
   border-radius: 10px;
+  
+  --initialTextColor: black;
+  --slideTextColor: white;
+
+  --initialBgColor: white;
+  --slideBgColor: black;
+
+  color: var(--initialTextColor);
+
+  background-image: linear-gradient(90deg,
+      var(--initialBgColor) 0%,
+      var(--initialBgColor) 50%,
+      var(--slideBgColor) 50%,
+      var(--slideBgColor) 100%);
+  background-size: 200%;
+  transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+    color .2s linear;
+  transition-delay: 0.0s, 0.15s;
 }
 
 .H li a:hover{
@@ -228,6 +235,9 @@ section#Hobbies{
   padding: 15px;
   background-color: black;
   color: white;
+  color: var(--slideTextColor);
+  cursor: pointer;
+  background-position: -100% 100%;
 }
 
 /* The Best Movies Section using DISPLAY FLEX */
@@ -247,7 +257,7 @@ section#Best_Movies{
 .BM h3{
   margin-bottom: 50px;
   font-size: 90px;
-  margin-top: 110px;
+  margin-top: auto;
 }
 
 .BM ol{
@@ -257,6 +267,7 @@ section#Best_Movies{
   list-style: none;
   justify-content: center;
 }
+
 
 .BM a{
   color: black;
@@ -281,12 +292,13 @@ section#Best_Movies{
 /* The Attribution/Tables section */
 
 section#Attributions{
-  padding: 250px 0;
+  padding: 200px 0;
 }
 
 
+
 .T h3{
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-align: center;
   font-size: 90px;
 }
@@ -323,8 +335,12 @@ table{
 
 /* The last section(footer) of the portfolio website, Contact information */
 
-footer#Contact_Information{
-  padding: 250px 0;
+footer#Contact{
+  padding: 150px 0;
+}
+
+.CI{
+  margin: auto;
 }
 
 .CM{
@@ -411,6 +427,38 @@ input[type=text]{
   padding: 10px;
   transform:scale(1);
 }
+
+/* Footer #2 for copyright and contact information */
+
+
+footer#info{
+  padding: 30px 0;
+  background-color: #021d2f;
+}
+
+.more_information{
+  color: white;
+}
+
+.more_information h3{
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.more_information ul li{
+  margin-left: 50px;
+  list-style: none;
+}
+
+.linkedin{
+  font-size: 30px;
+}
+
+.copyright{
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
 
 
 
