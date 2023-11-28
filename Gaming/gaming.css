@@ -70,11 +70,3 @@ main{
   height:460px ;
 }
 
-.img .text{
-  opacity: 0;
-  transition: all 600ms;
-}
-
-.img .text:hover{
-  opacity: 1;
-}

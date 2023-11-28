@@ -110,7 +110,7 @@ body{
 /* About me section */
 
 main#About_me{
-  padding:300px 0;
+  padding:400px 0;
   background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -152,16 +152,18 @@ main#About_me{
 
 
 section#Biography{
-  padding:290px 0;
+  padding:300px 0;
 }
 
 .B{
-  display: grid;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .B h2{
   font-size: 90px;
+  margin-top: 100px;
 }
 
 .B h2 a{
@@ -191,7 +193,7 @@ section#Hobbies{
 .H h3{
   font-size: 90px;
   margin-bottom: 20px;
-  margin-top: auto;
+  margin-top: 100px;
 }
 
 .H ul{
@@ -257,7 +259,7 @@ section#Best_Movies{
 .BM h3{
   margin-bottom: 50px;
   font-size: 90px;
-  margin-top: auto;
+  margin-top: 100px;
 }
 
 .BM ol{
@@ -292,7 +294,7 @@ section#Best_Movies{
 /* The Attribution/Tables section */
 
 section#Attributions{
-  padding: 200px 0;
+  padding: 300px 0;
 }
 
 
@@ -407,6 +409,7 @@ input[type=text]{
   font-size: 15px;
   font-family: 'Times New Roman', Times, serif;
   transition: all 300ms;
+  
   
 }
 
