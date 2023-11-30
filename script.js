@@ -13,7 +13,6 @@ const yr = new Date();
   let year = yr.getFullYear();
     document.getElementById("year").outerHTML = year;
 
-// When "Send Message" button from Contact Me section is clicked, send an alert saying "Your message has been sent. Thank you!"
 
 
 const sent = document.querySelector("#MsgSent");
@@ -24,38 +23,41 @@ const sent = document.querySelector("#MsgSent");
       })){
   }});
 
+const element = document.getElementById("MsgSent");
+  element.onmouseover = () =>{
+    element.innerText = "Send it";
+
+  element.onmouseout = () =>{
+    element.innerText = "Send Message";
+  }}
+
+
+
 const notify = document.querySelector("#MsgSent");
   let me = ("Your message has been sent. Thank you!");
   notify.addEventListener("click",() =>{
     alert(me)
   })
 
-  // Incrementing Numbers
 
-  // defualt number when not clicked yet
-var number = -1
-  // selecting the <p id="thumbsup"><p> 
-var count = document.getElementById('heart');
-  // giving "incrementor" variable a function using add.EventListener
-var incrementor = document.getElementById('up');
-// When click, the "number variable shows up and it adds up to one everytime the heart icon is click"
+let number = -1
+let count = document.getElementById('heart');
+let incrementor = document.getElementById('up');
   incrementor.addEventListener('click', () =>{
     number++;
     count.textContent = number.toString();
-    const press = document.querySelector("#up")
-      press.addEventListener('click', () =>{
-        if(number %2 == 0){
-          console.log("Even")
-        }
-        else{
-          console.log("Odd")
-        }
-      })
+    if(number % 2 ==0){
+      document.getElementById('heart').classList.add('Even');
+      document.getElementById('heart').classList.remove('Odd');
+    }
+    else{
+      document.getElementById('heart').classList.add('Odd');
+      document.getElementById('heart').classList.remove('Even');
+    }
   });
 
-// incrementing button even or Even
 
-  // for loops practise with My favorite cars of all time
+
 const cars = ["Toyota Trueno AE86,","Range Rover Sport,", "Honda NSX 1991,","Mazda RX7"];
   let fav = "My favorite Cars: "
   let txt = "";
@@ -65,12 +67,10 @@ const cars = ["Toyota Trueno AE86,","Range Rover Sport,", "Honda NSX 1991,","Maz
 
 console.log(fav + txt)
 
-// for loops with numbers
-// selecting the ordered list id "numbers"
    const numberlist = document.getElementById("numbers");
-  //  for loops  
+
     for(let i = 1; i <= 100; i++){
-      // instead of making li*100, this code does it for you "createElement"
+
       const listitems = document.createElement("li");
 
       const even = i % 2 == 0;
@@ -83,9 +83,9 @@ console.log(fav + txt)
         else listitems.classList.add("odd");
     }
   
-      
 
-  
-  
+
+
+
 
    
