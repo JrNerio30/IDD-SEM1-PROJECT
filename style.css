@@ -118,7 +118,7 @@ main#About_me{
 }
 
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: 1600px) {
   main#About_me{
     padding:250px 0;
     background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
@@ -177,7 +177,7 @@ section#Biography{
   margin-top: 150px;
 }
 
-@media all and (max-width: 1400px){
+@media all and (max-width: 1600px){
   .B h2{
     font-size: 90px;
     margin-top: 10px;
@@ -214,7 +214,7 @@ section#Hobbies{
   margin-top: 100px;
 }
 
-@media all and (max-width: 1400px){
+@media all and (max-width: 1600px){
   .H h3{
     font-size: 90px;
     margin: auto;
@@ -285,7 +285,7 @@ section#Best_Movies{
   margin-top: 100px;
 }
 
-@media all and (max-width: 1400px){
+@media all and (max-width: 1600px){
   .BM h3{
     margin: auto;
     font-size: 90px;
@@ -327,7 +327,7 @@ section#Attributions{
   padding: 300px 0;
 }
 
-@media all and (max-width: 1400px){
+@media all and (max-width: 1600px){
   section#Attributions{
     padding: 150px 0;
   }
