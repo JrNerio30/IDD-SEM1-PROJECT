@@ -19,5 +19,5 @@ I am committed to further enhancing my understanding of HTML, CSS, Javascript an
 
 ### Contact
 
-Fernando Nerio Jr - [Linkedin](www.linkedin.com/in/fernandoneriojr)
-Project Link: https://jrnerio30.github.io/Portfolio/
+* Fernando Nerio Jr - [Linkedin](www.linkedin.com/in/fernandoneriojr)
+* Project Link: https://jrnerio30.github.io/Portfolio/
