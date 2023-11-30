@@ -475,6 +475,32 @@ input[type=text]{
   transform:scale(1);
 }
 
+/* Javascript for loops and even or odd */
+
+footer#Js{
+  min-width: 100px;
+  min-height: 100px;
+  padding: 150px 0;
+}
+
+.forloop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.even{
+  margin-bottom: 3px;
+}
+
+.odd{
+  color: grey;
+  margin-bottom: 3px;
+}
+
+
 /* Footer #2 for copyright and contact information */
 
 
@@ -504,9 +530,14 @@ footer#info{
 .copyright{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 15px;
   margin-left: 50px;
+}
+
+.pt{
+  margin-bottom: 10px;
 }
 
 .thumb{
@@ -514,35 +545,18 @@ footer#info{
   width: 20px;
   height: 20px;
   transition: all 600ms;
-  color: red;
-}
-
-.thumb:hover{
   color: pink;
 }
 
+.thumb:hover{
+  color: red;
+}
 .tu{
   margin-bottom: 8px;
 }
 
-footer#Js{
-  min-width: 100px;
-  min-height: 100px;
-  padding: 150px 0;
-}
 
 
-
-.forloop{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-
-/* Media Quaries */
 
 
 
