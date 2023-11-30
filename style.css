@@ -27,7 +27,6 @@ body{
 }
 
 
-
 /* The navigation bar/Name, biography, hobbies, best movies, attributions and contact*/
 
 
@@ -109,12 +108,24 @@ body{
 
 /* About me section */
 
+
 main#About_me{
   padding:410px 0;
   background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+@media all and (max-width: 1400px ) {
+  main#About_me{
+    padding:250px 0;
+    background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 
@@ -163,7 +174,14 @@ section#Biography{
 
 .B h2{
   font-size: 90px;
-  margin-top: 100px;
+  margin-top: 150px;
+}
+
+@media all and (max-width: 1400px){
+  .B h2{
+    font-size: 90px;
+    margin-top: 10px;
+  }
 }
 
 .B h2 a{
@@ -194,6 +212,13 @@ section#Hobbies{
   font-size: 90px;
   margin-bottom: 20px;
   margin-top: 100px;
+}
+
+@media all and (max-width: 1500px){
+  .H h3{
+    font-size: 90px;
+    margin: auto;
+  }
 }
 
 .H ul{
@@ -251,8 +276,6 @@ section#Best_Movies{
 
 .BM{
   text-align: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
 }
 
 
@@ -260,6 +283,13 @@ section#Best_Movies{
   margin-bottom: 50px;
   font-size: 90px;
   margin-top: 100px;
+}
+
+@media all and (max-width: 1400px){
+  .BM h3{
+    margin: auto;
+    font-size: 90px;
+  }
 }
 
 .BM ol{
@@ -297,6 +327,15 @@ section#Attributions{
   padding: 300px 0;
 }
 
+@media all and (max-width: 1400px){
+  section#Attributions{
+    padding: 150px 0;
+  }
+}
+
+.T{
+  margin: auto;
+}
 
 
 .T h3{
@@ -304,6 +343,7 @@ section#Attributions{
   text-align: center;
   font-size: 90px;
 }
+
 
 .T table{
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
@@ -319,6 +359,8 @@ section#Attributions{
   background-color: #000000;
 }
 
+
+
 .second_row td{
  background-color: rgb(207, 204, 204);
 }
@@ -327,6 +369,8 @@ table{
   border-collapse: collapse;
   margin: auto;
 }
+
+
 
 /* "GO TO IMAGE LINK */
 
@@ -458,11 +502,47 @@ footer#info{
 }
 
 .copyright{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-top: 15px;
   margin-left: 50px;
 }
 
+.thumb{
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: all 600ms;
+  color: red;
+}
 
+.thumb:hover{
+  color: pink;
+}
+
+.tu{
+  margin-bottom: 8px;
+}
+
+footer#Js{
+  min-width: 100px;
+  min-height: 100px;
+  padding: 150px 0;
+}
+
+
+
+.forloop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* Media Quaries */
 
 
 
