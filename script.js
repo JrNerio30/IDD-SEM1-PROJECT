@@ -47,12 +47,12 @@ let incrementor = document.getElementById('up');
     number++;
     count.textContent = number.toString();
     if(number % 2 ==0){
-      document.getElementById('heart').classList.add('Even');
-      document.getElementById('heart').classList.remove('Odd');
+      heart.classList.add('Even');
+      heart.classList.remove('Odd');
     }
     else{
-      document.getElementById('heart').classList.add('Odd');
-      document.getElementById('heart').classList.remove('Even');
+      heart.classList.add('Odd');
+      heart.classList.remove('Even');
     }
   });
 
