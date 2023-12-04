@@ -16,36 +16,33 @@
   
   <body>
       <main id="navigation">
-        <h1><a href="#top"><img src="./Images/Logo.gif"></a></h1>
           <nav>
-            <ul>
-                <li><a href="#Biography">Biography</a></li>
+            <span>
+              <a href="#top"><img src="./Images/Logo.gif"></a>
+            </span>
+            <ion-icon id="menu_button" name="menu-outline">
+            </ion-icon>
+            <ul class="nav_links" id="links">
                 <li><a href="#Hobbies">Hobbies</a></li>
                 <li><a href="#Best_Movies" class="href">Best Movies</a></li>
                 <li><a href="#Attributions" class="href">Attributions</a></li>
+                <a class="contact" href="#Contact">Contact</a>
             </ul> 
           </nav>
-          <a class="contact" href="#Contact">Contact</a>
+          
+          
+
       </main>
-     
       <header id="About_me">
           <span>
               <img src="./Images/20231115_230414000_iOS.jpg" alt="a cat staring at you">
                 <h2>About Me</h2>
                <p>
-                  I am a passionate web developer who constantly seeks opportunities to expand my knowledge and coding skills.
-                  My mission is to design and develop websites that not only meet industry standards but also have a significant, positive impact on the daily lives of many individuals. 
-                  I am driven by the belief that the internet can be a powerful tool for making information, services,   and resources more accessible and user-friendly for people from all walks of life.
-                  With a keen eye for detail, a commitment to excellence, and a genuine desire to  enhance the online experience, I take pride in my work as a web developer 
-                  and look forward to every new project as a chance to contribute to a better, more interconnected digital world.
+                Passionate web developer committed to creating impactful, user-friendly websites. Dedicated to excellence and contributing to a more interconnected digital world.
                </p>
           </span>
       </header>
         
-      <section id="Biography">
-        <h2><a href="#Hobbies">Biography</a></h2>
-      </section>
-
       <section id="Hobbies">
         <h3>Hobbies</h3>
         <nav>
@@ -71,7 +68,7 @@
           </nav>
         </section>
 
-      <section class="T" id="Attributions">
+      <section id="Attributions">
         <h3>Attributions</h3>
         <table>
           <tr>
@@ -107,35 +104,29 @@
         </table>
       </section>
 
-      <footer class="CI" id="Contact">
-        <div class="CM">
+      <section id="Contact">
             <h2>Contact Me</h2>
-          <div class="inputs">
             <h4>First Name</h4>
-            <input class="first_name" type="text" name="first name" id="fname">
+            <input type="text" name="first name" id="fname">
             <h4>Last Name</h4>
-            <input class="last_name" type="text" name="last name" id="lname">
+            <input type="text" name="last name" id="lname">
             <h4>Email Address</h4>
-            <input class="email" type="text" name="email address" id="eaddress">
+            <input type="text" name="email address" id="eaddress">
             <h4>Comments/Questions</h4>
-            <input class="comments" type="text" name="comment/questions" id="c/q">
-            <a href="#info" class="SM" id="MsgSent">Send Message</a>
-          </div>
-        </div>
-      </footer>
+            <input class="comments" type="comment" name="comment/questions" id="c/q">
+            <a href="#info" class="Send_Message" id="MsgSent">Send Message</a>
+      </section>
       
 
       
-      <footer id="Js">
-        <div class="forloop">
-          <h1 class="this_is">This is Javascript For Loops and Even or Odd</h1>
+      <section id="Js">
+          <h1>This is Javascript For Loops and Even or Odd</h1>
           <ol class="zebra" id="numbers">
           </ol>
-        </div>
-      </footer>
+      </section>
 
-      <footer class="more" id="info">
-        <div class="more_information">
+      <footer id="info">
+        <!-- <div class="more_information"> -->
           <h3>More Contact Information</h3>
           <nav>
             <ul>
@@ -144,16 +135,13 @@
               <li class="linkedin"><ion-icon name="logo-linkedin"></ion-icon></li>
             </ul>
           </nav>
-          <div class="copyright">
+          <span class="copyright">
             Fernando Nerio Jr <p id="year"></p> &copy; 
-            <p class="pt">Press this</p>
-            <ion-icon class="thumb" id="up" name="heart-outline">
-            </ion-icon>
-            <div class="tu">
-              <p class="Odd" id="heart"></p>
-            </div>
-          </div>
-        </div>
+            <p>Press this</p>
+            <ion-icon class="Heart" id="heart_icon" name="heart-outline"></ion-icon>
+            <p class="Odd" id="counter"></p>
+          </span>  
+
       </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

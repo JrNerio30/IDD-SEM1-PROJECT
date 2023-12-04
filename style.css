@@ -7,6 +7,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: fit-content;
 }
 
 html{
@@ -30,17 +31,22 @@ body{
 /* The navigation bar/Name, biography, hobbies, best movies, attributions and contact*/
 
 main#navigation{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 10px 4%; */
-  background-color: black;
   position: fixed;
   top: 0;
   width: 100%;
+  transition: all 400ms ease-in-out ;
+  background: rgba(0, 0, 0, 0.9);
 }
 
+main.scrolled{
+  background: rgba(0, 0, 0, 1);
+}
 
+#navigation nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Logo */
 
@@ -48,25 +54,29 @@ main#navigation{
   margin-top: 10px;
   width: 50px;
   height: 50px;
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 /* BIOGRAPHY, HOBBIES, BEST MOVIES, ATTRIBUTIONS */
 
-
  #navigation li{
-  display: inline-block;
-  align-items: center;
-  justify-content: center
+  list-style: none;
  }
 
- #navigation li a{
+  .nav_links{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+ }
+
+
+ #navigation nav a{
+  
   color: white;
   font-size: 18px;
   text-decoration: none;
   transition: all 300ms;
   padding: 10px 20px;
-  margin-left: 20px;
 }
 
 
@@ -77,6 +87,51 @@ main#navigation{
 #navigation nav a:active{
   opacity: 0.7;
 }
+
+#navigation ion-icon{
+  width: 50px;
+  height: 50px;
+  color: white;
+  position: absolute;
+  left: 85%;
+  top: 13px;
+}
+
+
+@media (max-width: 600px) {
+
+  #navigation nav{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  #navigation img{
+    position: absolute;
+    right: 85%;
+    top: 5px;
+  }
+
+  .nav_links{
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    display: none;
+  }
+
+  .nav_links.active{
+    display: flex;
+  }
+
+}
+
+@media (min-width: 600px ) {
+  #navigation ion-icon{
+    display: none;
+  }
+}
+
 
 /* CONTACT */
 
@@ -94,7 +149,6 @@ main#navigation{
 
 .contact:hover{
   background-color: white;
-  color: black;
 }
 
 
@@ -144,47 +198,39 @@ header#About_me{
 }
 /* About Me Media Query Section */
 
-@media (max-width: 400px){
+
+@media (max-width: 400px) {
   header#About_me{
-    height:150vh;
+    height:200vh;
     width: 100%;
     background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+  #About_me img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    float: left;
+    border: black 5px solid;
+    margin: 0px 100px 0px 130px;
+  }
   #About_me h2{
-    font-size: 50px;
+    font-size: 40px;
     color: white;
-    margin-top: 0px;
-    margin-left: 40px;
+    text-align: center;
   }
   #About_me p{  
     font-size: 15px;
     color: white;
-    margin: 0px 20px 0px 40px;
+    text-align: center;
+    margin-inline: 50px;
   }
 }
-
-@media (min-width: 400px){
-
-  #About_me h2{
-    font-size: 50px;
-    color: white;
-    margin-top: 0px;
-    margin-left: 40px;
-  }
-  #About_me p{  
-    font-size: 15px;
-    color: white;
-    margin: 0px 20px 0px 40px;
-  }
-}
-
-@media (max-width: 600px) {
+@media (min-width: 400px) {
   header#About_me{
-    height:150vh;
+    height:100vh;
     width: 100%;
     background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
     background-position: center;
@@ -197,32 +243,12 @@ header#About_me{
     border-radius: 50%;
     float: left;
     border: black 5px solid;
-    margin: 110px 20px 0px 30px;
+    margin: 150px 20px 0px 20px;
   }
   #About_me h2{
-    font-size: 50px;
+    font-size: 40px;
     color: white;
-    margin-top: 100px;
-  }
-  #About_me p{  
-    font-size: 15px;
-    color: white;
-    margin: 0px 20px 0px 40px;
-  }
-}
-@media (min-width: 600px) {
-  #About_me img{
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    float: left;
-    border: black 5px solid;
-    margin: 100px 30px 0px 40px;
-  }
-  #About_me h2{
-    font-size: 50px;
-    color: white;
-    margin-top: 90px;
+    margin-top: 160px;
   }
   #About_me p{  
     font-size: 15px;
@@ -239,6 +265,11 @@ header#About_me{
     border: black 5px solid;
     margin: 120px 20px 0px 100px;
   }
+  #About_me h2{
+    font-size: 40px;
+    color: white;
+    margin-top: 170px;
+  }
   #About_me p{
     margin: 0px 100px 0px 100px;
     font-size: 15px;
@@ -247,6 +278,14 @@ header#About_me{
 }
 
 @media (min-width: 992px) {
+  header#About_me{
+    height:100vh;
+    width: 100%;
+    background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   #About_me img{
     width: 250px;
     height: 250px;
@@ -262,39 +301,6 @@ header#About_me{
   }
 } 
 
-
-
-/* The biography button that leads to hobbies section */
-
-
-section#Biography{
-  height: 100vh;
-}
-
-#Biography{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#Biography h2{
-  font-size: 90px;
-  margin-top: 150px;
-}
-
-
-#Biography h2 a{
-  text-decoration: none;
-  color: black;
-  transition: all 500ms;
-}
-
-#Biography h2 a:hover{
-  padding: 0 50px;
-  padding-bottom: 10px;
-  border-radius: 300px;
-  box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
-}
 
 /* The Hobbies section using DISPLAY GRID*/
 
@@ -341,6 +347,13 @@ section#Hobbies{
   color: white;
 }
 
+@media (max-width: 600px) {
+  section#Hobbies{
+    height: 200vh;
+  }
+  
+}
+
 
 /* The Best Movies Section using DISPLAY FLEX */
 
@@ -368,6 +381,7 @@ section#Best_Movies{
   gap: 2rem;
   list-style: none;
   justify-content: center;
+  margin-inline: 10px;
 }
 
 
@@ -390,128 +404,124 @@ section#Best_Movies{
   
 }
 
+@media (max-width: 600px) {
+  section#Best_Movies{
+    height: 200vh;
+  }
+
+  #Best_Movies h3{
+    font-size: 90px;
+    text-align: center;
+  }
+  
+}
+
 
 /* The Attribution/Tables section */
 
 section#Attributions{
-  padding: 300px 0;
+  height: 100vh;
 }
 
-@media all and (max-width: 1600px){
-  section#Attributions{
-    padding: 150px 0;
-  }
-}
-
-.T{
-  margin: auto;
+#Attributions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.T h3{
-  margin-bottom: 40px;
+#Attributions h3{
   text-align: center;
   font-size: 90px;
 }
 
 
-.T table{
+#Attributions table{
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
 }
 
 
-.T th, td{
+#Attributions th, td{
   padding: 10px 25px;
 }
 
-.T th{
+#Attributions th{
   color: white;
   background-color: #000000;
 }
 
 
 
-.second_row td{
+#Attributions .second_row td{
  background-color: rgb(207, 204, 204);
 }
 
-table{
+#Attributions table{
   border-collapse: collapse;
-  margin: auto;
-}
+  max-width: 100%;
+} 
 
 
 
 /* "GO TO IMAGE LINK */
 
-.T a{
+#Attributions a{
   text-decoration: none;
 }
 
+@media (max-width: 600px){
+  section#Attributions{
+    height: 200vh;
+  }
+  #Attributions h3{
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 70px;
+  }
+}
 
 /* The last section(footer) of the portfolio website, Contact information */
 
-footer#Contact{
-  padding: 150px 0;
+section#Contact{
+  height: 100vh;
 }
 
-.CI{
-  margin: auto;
+#Contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
 }
 
-.CM{
-  color: black;
-  display: grid;
-  gap: 2rem;
-}
 
-.CM h2{
+#Contact h2{
   font-size: 50px;
   text-align: center;
 }
 
 /* FIRST NAME, LAST NAME, EMAIL ADDRESS, COMMENTS/QUESTIONS */
 
-input[type=text]{
+#Contact input[type=text]{
   width: 300px;
-  margin: 8px 0;
+  height: 30px;
+  padding-inline: 10px;
   border-radius: 4px; 
 }
 
-.inputs{
-  display: grid;
-  gap: 5px;
-  margin:auto;
-}
-
-.first_name{
-  width: 200px;
-  height: 30px;
-  border: grey 1px solid;
-}
-
-
-.last_name{
-  width: 100%;
-  height: 30px;
-  border: grey 1px solid;
-}
-
-.email{
-  width: 100%;
-  height: 30px;
-  border: grey 1px solid;
-}
 
 .comments{
-  width: 100%;
-  height: 100px;
-  border: grey 1px solid;
+  width: 300px;
+  height: 100px;  
+  padding-inline: 10px;
+  border-radius: 4px; 
 }
+
 
 /* SEND MESSAGE BUTTON */
 
-.SM{
+#Contact a{
   margin-top: 20px;
   color: white;
   background-color: #33b864;
@@ -523,37 +533,34 @@ input[type=text]{
   font-size: 15px;
   font-family: 'Times New Roman', Times, serif;
   transition: all 300ms;
-  
-  
-}
-
-.inputs a{
-  display: grid;
-  align-items: center;
-  justify-content: center;
   text-decoration: none;
 }
 
-.SM:hover{
-  padding: 15px;
+#Contact a:hover{
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
   transform: translateX(2px) translateY(-2px) scale(1.1);
 }
 
-.SM:active{
+#Contact a:active{
   padding: 10px;
   transform:scale(1);
 }
 
+@media (max-width: 600px) {
+  section#Contact{
+    height: 200vh;
+  }
+}
+
 /* Javascript for loops and even or odd */
 
-footer#Js{
+section#Js{
   min-width: 100px;
   min-height: 100px;
   padding: 150px 0;
 }
 
-.forloop{
+#Js{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -561,6 +568,11 @@ footer#Js{
   gap: 1rem;
 }
 
+#Js h1{
+  text-align: center;
+}
+
+/* Javascript Classes */
 .even{
   margin-bottom: 3px;
 }
@@ -579,16 +591,16 @@ footer#info{
   background-color: #021d2f;
 }
 
-.more_information{
+#info{
   color: white;
 }
 
-.more_information h3{
+#info h3{
   margin-left: 20px;
   margin-bottom: 10px;
 }
 
-.more_information ul li{
+#info ul li{
   margin-left: 50px;
   list-style: none;
 }
@@ -606,11 +618,7 @@ footer#info{
   margin-left: 50px;
 }
 
-.pt{
-  margin-bottom: 10px;
-}
-
-.thumb{
+.Heart{
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -618,7 +626,7 @@ footer#info{
   color: pink;
 }
 
-.thumb:hover{
+.Heart:hover{
   color: red;
 }
 .tu{
@@ -631,6 +639,8 @@ footer#info{
   font-weight: bold;
   text-align: center;
 }
+
+/* Button Incrementer */
 
 .Even{
   color: pink;
