@@ -66,6 +66,8 @@ main.scrolled{
   list-style: none;
  }
 
+ /* Align, Hobbies, best movies and attribution in rows */
+
   #navigation ul{
   display: flex;
   align-items: center;
