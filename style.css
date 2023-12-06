@@ -7,7 +7,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  min-width: fit-content;
 }
 
 html{
@@ -20,7 +19,9 @@ body{
   padding: 0; */
   background-color: #efebec;
   font-family: 'Poppins', sans-serif;
+  min-width: fit-content;
 }
+
 
 ::selection{
   background-color: rgb(255, 255, 255);
@@ -164,6 +165,7 @@ header#About_me{
   height:100vh;
   width: 100%;
   background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
