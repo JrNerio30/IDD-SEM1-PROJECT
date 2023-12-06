@@ -15,8 +15,6 @@ html{
 
 body{
   box-sizing: border-box;
-  /* margin: 0;
-  padding: 0; */
   background-color: #efebec;
   font-family: 'Poppins', sans-serif;
   min-width: fit-content;
@@ -37,11 +35,16 @@ main#navigation{
   width: 100%;
   transition: all 400ms ease-in-out ;
   background: rgba(0, 0, 0, 0.9);
+  padding-block: 10px ;
 }
+
+/* Menu bar changes background to black when scrolled | implemented in JavaScript*/
 
 main.scrolled{
   background: rgba(0, 0, 0, 1);
 }
+
+
 
 #navigation nav{
   display: flex;
@@ -55,7 +58,7 @@ main.scrolled{
   margin-top: 10px;
   width: 50px;
   height: 50px;
-  margin-left: 0px;
+  margin-left: 40px;
 }
 
 /* BIOGRAPHY, HOBBIES, BEST MOVIES, ATTRIBUTIONS */
@@ -64,15 +67,16 @@ main.scrolled{
   list-style: none;
  }
 
-  .nav_links{
+ /* Align, Hobbies, best movies and attribution in rows */
+
+  #navigation ul{
   display: flex;
   align-items: center;
   margin-right: 20px;
  }
 
 
- #navigation nav a{
-  
+ #navigation nav li a{
   color: white;
   font-size: 18px;
   text-decoration: none;
@@ -81,13 +85,15 @@ main.scrolled{
 }
 
 
-#navigation nav a:hover{
+#navigation nav li a:hover{
   color: darkred;
 }
 
-#navigation nav a:active{
+#navigation nav li a:active{
   opacity: 0.7;
 }
+
+/* Mobile Humburger ICon */
 
 #navigation ion-icon{
   width: 50px;
@@ -98,45 +104,8 @@ main.scrolled{
   top: 13px;
 }
 
-
-@media (max-width: 600px) {
-
-  #navigation nav{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-  }
-
-  #navigation img{
-    position: absolute;
-    right: 85%;
-    top: 5px;
-  }
-
-  .nav_links{
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 100px;
-    margin-bottom: 30px;
-    display: none;
-  }
-
-  .nav_links.active{
-    display: flex;
-  }
-
-}
-
-@media (min-width: 600px ) {
-  #navigation ion-icon{
-    display: none;
-  }
-}
-
-
-/* CONTACT */
-
-.contact{
+/* Contact Button */
+  .contact{
   border-radius: 10px;
   padding: 8px 25px;
   border: none;
@@ -150,6 +119,7 @@ main.scrolled{
 
 .contact:hover{
   background-color: white;
+  color: black;
 }
 
 
@@ -158,12 +128,49 @@ main.scrolled{
 }
 
 
+
+/* Mobile Nav Bar */
+
+@media only screen and (max-width: 640px) {
+
+  #navigation nav{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  #navigation img{
+    position: absolute;
+    right: 85%;
+    top: 1px;
+  }
+
+  #navigation ul{
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    display: none;
+  }
+
+  #navigation ul.active{
+    display: flex;
+  }
+
+}
+
+/* Remove Humburger when pass 600px */
+
+@media only screen and (min-width: 640px ) {
+  #navigation ion-icon{
+    display: none;
+  }
+}
+
 /* About me section */
 
 
 header#About_me{
   height:100vh;
-  width: 100%;
   background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
   background-attachment: fixed;
   background-position: center;
@@ -171,11 +178,15 @@ header#About_me{
   background-size: cover;
 }
 
+/* #About_me Body*/
+
 #About_me{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* The Cat */
 
 #About_me img{
   width: 250px;
@@ -198,108 +209,68 @@ header#About_me{
   font-size: 15px;
   color: white;
 }
+
 /* About Me Media Query Section */
+/* About me Phone */
 
-
-@media (max-width: 400px) {
+@media only screen and (max-width: 640px) {
   header#About_me{
-    height:200vh;
-    width: 100%;
-    background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 100vh;
   }
   #About_me img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    float: left;
-    border: black 5px solid;
-    margin: 0px 100px 0px 130px;
+    margin-inline: 130px 130px;
   }
   #About_me h2{
     font-size: 40px;
-    color: white;
     text-align: center;
   }
   #About_me p{  
-    font-size: 15px;
-    color: white;
     text-align: center;
     margin-inline: 50px;
   }
 }
-@media (min-width: 400px) {
+
+/* Pass phone */
+@media (min-width: 640px) {
   header#About_me{
-    height:100vh;
-    width: 100%;
-    background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height:100vh;
   }
   #About_me img{
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    float: left;
-    border: black 5px solid;
     margin: 150px 20px 0px 20px;
   }
   #About_me h2{
     font-size: 40px;
-    color: white;
     margin-top: 160px;
   }
   #About_me p{  
-    font-size: 15px;
-    color: white;
     margin: 0px 20px 0px 40px;
   }
 }
+
+/* Tablets */
 @media (min-width: 768px) {
   #About_me img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    float: left;
-    border: black 5px solid;
     margin: 120px 20px 0px 100px;
   }
   #About_me h2{
     font-size: 40px;
-    color: white;
     margin-top: 170px;
   }
   #About_me p{
     margin: 0px 100px 0px 100px;
-    font-size: 15px;
-    color: white;
   }
 }
 
+/* Large tablets and laptops */
 @media (min-width: 992px) {
   header#About_me{
-    height:100vh;
-    width: 100%;
-    background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height:100vh;
   }
   #About_me img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    float: left;
-    border: black 5px solid;
     margin: 90px 20px 150px 100px;
   }
   #About_me p{
     margin: 0px 100px 0px 100px;
-    font-size: 15px;
-    color: white;
   }
 } 
 
@@ -310,6 +281,7 @@ section#Hobbies{
   height: 100vh;
 }
 
+/* Hobbies Body */
 #Hobbies{
   display: flex;
   align-items: center;
@@ -317,6 +289,7 @@ section#Hobbies{
   flex-direction: column;
 }
 
+/* "Hobbies" (Basketball, Music, Gaming) */
 #Hobbies h3{
   font-size: 90px;
 }
@@ -349,11 +322,11 @@ section#Hobbies{
   color: white;
 }
 
-@media (max-width: 600px) {
+/* Hobbies Mobile */
+@media only screen and (max-width: 640px) {
   section#Hobbies{
-    height: 200vh;
+    min-height: 100vh;
   }
-  
 }
 
 
@@ -364,6 +337,7 @@ section#Best_Movies{
   height: 100vh;
 }
 
+/* Best_Movies Body */
 #Best_Movies{
   display: flex;
   align-items: center;
@@ -371,6 +345,7 @@ section#Best_Movies{
   flex-direction: column;
 }
 
+/* All of the movies */
 
 #Best_Movies h3{
   font-size: 90px;
@@ -406,9 +381,11 @@ section#Best_Movies{
   
 }
 
-@media (max-width: 600px) {
+/*  Best_Movies Mobile */
+
+@media only screen and (max-width:640px) {
   section#Best_Movies{
-    height: 200vh;
+    min-height: 100vh;
   }
 
   #Best_Movies h3{
@@ -425,6 +402,7 @@ section#Attributions{
   height: 100vh;
 }
 
+/* Attributions Body */
 #Attributions{
   display: flex;
   flex-direction: column;
@@ -432,6 +410,7 @@ section#Attributions{
   align-items: center;
 }
 
+/* Attributions/Tables */
 
 #Attributions h3{
   text-align: center;
@@ -461,7 +440,7 @@ section#Attributions{
 
 #Attributions table{
   border-collapse: collapse;
-  max-width: 100%;
+  min-width: 100%;
 } 
 
 
@@ -472,9 +451,10 @@ section#Attributions{
   text-decoration: none;
 }
 
-@media (max-width: 600px){
+/* Attributions Mobile */
+@media only screen and (max-width: 640px){
   section#Attributions{
-    height: 200vh;
+    min-height: 150vh;
   }
   #Attributions h3{
     margin-bottom: 0px;
@@ -489,6 +469,8 @@ section#Contact{
   height: 100vh;
 }
 
+/* Contact Body */
+
 #Contact{
   display: flex;
   flex-direction: column;
@@ -497,7 +479,7 @@ section#Contact{
   gap:10px;
 }
 
-
+/* Contact Me */
 #Contact h2{
   font-size: 50px;
   text-align: center;
@@ -512,6 +494,7 @@ section#Contact{
   border-radius: 4px; 
 }
 
+/* Comments */
 
 .comments{
   width: 300px;
@@ -538,6 +521,8 @@ section#Contact{
   text-decoration: none;
 }
 
+/* Send Message Hover Style */
+
 #Contact a:hover{
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
   transform: translateX(2px) translateY(-2px) scale(1.1);
@@ -548,20 +533,22 @@ section#Contact{
   transform:scale(1);
 }
 
-@media (max-width: 600px) {
+/* Contact Mobile */
+
+@media only screen and (max-width: 640px) {
   section#Contact{
-    height: 200vh;
+    min-height: 100vh;
   }
 }
 
 /* Javascript for loops and even or odd */
 
 section#Js{
-  min-width: 100px;
-  min-height: 100px;
-  padding: 150px 0;
+  min-height: 100vh;
+  padding-block: 150px;
 }
 
+/* JS Body */
 #Js{
   display: flex;
   flex-direction: column;
@@ -569,6 +556,7 @@ section#Js{
   align-items: center;
   gap: 1rem;
 }
+
 
 #Js h1{
   text-align: center;
@@ -607,10 +595,13 @@ footer#info{
   list-style: none;
 }
 
+/* Linkedin Icon */
+
 .linkedin{
   font-size: 30px;
 }
 
+/* Copyright */
 .copyright{
   display: flex;
   align-items: center;
@@ -619,7 +610,7 @@ footer#info{
   margin-top: 15px;
   margin-left: 50px;
 }
-
+/* Heart Icon */
 .Heart{
   cursor: pointer;
   width: 20px;
@@ -631,16 +622,7 @@ footer#info{
 .Heart:hover{
   color: red;
 }
-.tu{
-  margin-bottom: 8px;
-}
 
-.A{
-  color: red;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
 
 /* Button Incrementer */
 
