@@ -9,17 +9,6 @@ let txt = ""
 for(let i = 0; i < cars.length; i++) {
   txt += cars[i] + " "
 }
-// Scroll Navigation Bar
-document.addEventListener('scroll', () =>{
-  const header = document.querySelector('#navigation');
-    if(window.scrollY > 0 ){
-      header.classList.add('scrolled');
-    }else{
-      header.classList.remove('scrolled');
-    }
-  } 
-)
-
 
 // Current Year
 let yr = new Date()
@@ -47,7 +36,7 @@ const sent = document.querySelector("#MsgSent")
 // Mouse Hover - Changes text 
 const element = document.getElementById("MsgSent")
   element.onmouseover = () =>{
-    element.innerText = "Sent it"
+    element.innerText = "Send it"
 
   element.onmouseout = () =>{
     element.innerText = "Send Message"

@@ -29,7 +29,7 @@ body{
 
 /* The navigation bar/Name, biography, hobbies, best movies, attributions and contact*/
 
-main#navigation{
+header#navigation{
   position: fixed;
   top: 0;
   width: 100%;
@@ -37,13 +37,6 @@ main#navigation{
   background: rgba(0, 0, 0, 0.9);
   padding-block: 10px ;
 }
-
-/* Menu bar changes background to black when scrolled | implemented in JavaScript*/
-
-main.scrolled{
-  background: rgba(0, 0, 0, 1);
-}
-
 
 
 #navigation nav{
@@ -169,7 +162,7 @@ main.scrolled{
 /* About me section */
 
 
-header#About_me{
+main#About_me{
   height:100vh;
   background-image: url(./Images/neom-9hWJs7iblh8-unsplash.jpg);
   background-attachment: fixed;
@@ -214,7 +207,7 @@ header#About_me{
 /* About me Phone */
 
 @media only screen and (max-width: 640px) {
-  header#About_me{
+  main#About_me{
     min-height: 100vh;
   }
   #About_me img{
@@ -232,7 +225,7 @@ header#About_me{
 
 /* Pass phone */
 @media (min-width: 640px) {
-  header#About_me{
+  section#About_me{
     min-height:100vh;
   }
   #About_me img{
@@ -263,7 +256,7 @@ header#About_me{
 
 /* Large tablets and laptops */
 @media (min-width: 992px) {
-  header#About_me{
+  main#About_me{
     min-height:100vh;
   }
   #About_me img{
@@ -279,6 +272,11 @@ header#About_me{
 
 section#Hobbies{
   height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1585477281005-b83d4b47eba4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Hobbies Body */
@@ -292,6 +290,8 @@ section#Hobbies{
 /* "Hobbies" (Basketball, Music, Gaming) */
 #Hobbies h3{
   font-size: 90px;
+  color: white;
+  text-shadow: 5px 5px 10px #000000;
 }
 
 
@@ -335,6 +335,11 @@ section#Hobbies{
 
 section#Best_Movies{
   height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1551009337-dac4bdb45831?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Best_Movies Body */
@@ -349,6 +354,8 @@ section#Best_Movies{
 
 #Best_Movies h3{
   font-size: 90px;
+  color: white;
+  text-shadow: 5px 5px 10px #000000;
 }
 
 
@@ -365,6 +372,7 @@ section#Best_Movies{
 #Best_Movies a{
   color: black;
   text-decoration: none;
+  background-color: white;
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
   font-weight: bold;
   padding: 8px;
@@ -387,6 +395,8 @@ section#Best_Movies{
   section#Best_Movies{
     min-height: 100vh;
   }
+
+
 
   #Best_Movies h3{
     font-size: 90px;
@@ -467,6 +477,11 @@ section#Attributions{
 
 section#Contact{
   height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Contact Body */
@@ -483,7 +498,10 @@ section#Contact{
 #Contact h2{
   font-size: 50px;
   text-align: center;
+  color: white;
+  text-shadow: 5px 5px 10px #000000;
 }
+
 
 /* FIRST NAME, LAST NAME, EMAIL ADDRESS, COMMENTS/QUESTIONS */
 
@@ -509,9 +527,9 @@ section#Contact{
 #Contact a{
   margin-top: 20px;
   color: white;
-  background-color: #33b864;
+  background-color: #9fac8a;
   border: none;
-  padding: 10px;
+  padding: 10px 50px;
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
@@ -525,12 +543,11 @@ section#Contact{
 
 #Contact a:hover{
   box-shadow: rgba(2,8,20,0.1) 0px 0.35em 1.175em, rgba(2,8,20,0.8) 0px 0.175em 0.5em;
-  transform: translateX(2px) translateY(-2px) scale(1.1);
+  padding-inline: 50px;
 }
 
 #Contact a:active{
-  padding: 10px;
-  transform:scale(1);
+  opacity: 0.5;
 }
 
 /* Contact Mobile */
@@ -544,7 +561,7 @@ section#Contact{
 /* Javascript for loops and even or odd */
 
 section#Js{
-  min-height: 100vh;
+  min-height: 50vh;
   padding-block: 150px;
 }
 
@@ -560,6 +577,73 @@ section#Js{
 
 #Js h1{
   text-align: center;
+}
+
+/* Show Javascript For loops */
+details {
+  width: 80%;
+  margin: 0 auto ;
+  background: #282828;
+  margin-bottom: .5rem;
+  box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+summary {
+  padding: 1rem;
+  display: block;
+  background: #333;
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+summary:before {
+  content: '';
+  border-width: .6rem;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  position: absolute;
+  top: 1rem;
+  left: 0.3rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+details > ul {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+
+
+
+#Js summary{
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  
+  padding: 10px 20px;
+  background-color: #000000;
+  transition: transform 600ms ease;
+}
+
+
+#Js aside{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Javascript Classes */
