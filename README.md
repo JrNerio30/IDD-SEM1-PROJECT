@@ -17,10 +17,6 @@ I've learned:
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
 
-* HTML
-* CSS
-* JavaScript
-
 ### Contact
 
 * Fernando Nerio Jr - [Linkedin](www.linkedin.com/in/fernandoneriojr)
