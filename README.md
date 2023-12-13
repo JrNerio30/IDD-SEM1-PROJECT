@@ -1,6 +1,6 @@
 ### About Portfolio
 
-This is my [Portfolio](https://jrnerio30.github.io/Portfolio/) and it's my first website/ personal project.
+This is my [IDD Semester 1 Project](https://jrnerio30.github.io/Portfolio/) and it's my first website/ personal project.
 And with this project, I am confident and ready to get my hands dirty on creating many more projects in the future.
 
 I've learned:
